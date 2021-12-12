@@ -1,0 +1,390 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+#icon {
+    max-width: 24px;
+    max-height: 24px;
+}
+
+#profile {
+    max-width: 35px;
+    max-height: 35px;
+}
+
+body {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: -webkit-linear-gradient(#4343fc, #f83a3a);
+}
+
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+    background-color: rgb(49, 49, 49);
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Space out header and footer items*/
+
+.header .contact-name {
+    margin: 0px 90px;
+}
+
+.send {
+    margin: 0px 0px 0px 100px;
+    border-radius: 20px;
+}
+
+.send button {
+    font-size: 35px;
+    background-image: -webkit-radial-gradient(#fa2d2d, #3131fc);
+    border-radius: 200px;
+}
+
+.message-entry-area .send,
+.header .profile-pic img {
+    max-width: 100%;
+    height: 26px;
+    width: 26px;
+    border-radius: 200px;
+}
+
+nav a {
+    margin: 0px 50px 0px;
+    padding: 12px 12px 12px;
+    text-decoration: none;
+    color: rgb(238, 235, 235);
+    font-family: 'Courier New', Courier, monospace;
+    word-wrap: normal;
+    letter-spacing: 2px;
+}
+
+header div {
+    padding: 12.5px 12px 12px;
+}
+
+.room-msgs {
+    margin-top: 70px;
+    display: grid;
+    overflow-y: auto;
+}
+
+.incoming-msg-box-holder {
+    text-align: -webkit-left;
+}
+
+.incoming-msg-box {
+    width: auto;
+    margin: 20px 10px 20px 0px;
+    max-width: fit-content;
+}
+
+.incoming-msg {
+    margin: 11px 0px;
+    width: max-content;
+    height: max-content;
+    min-width: 90px;
+    max-width: 500px;
+    word-wrap: break-word;
+    border-radius: 5px 20px 5px 20px;
+    padding: 5px 20px;
+    background-color: #a9bef8;
+    color: rgb(54, 54, 54);
+}
+
+.incoming-msg-box .time {
+    color: rgb(65, 65, 65);
+    margin: 5px 0px 0px 0px;
+    max-width: fit-content;
+    font-size: 12px;
+}
+
+.incoming-msg-box .profile-and-message {
+    display: flex;
+}
+
+.incoming-msg-box .profile-pic {
+    background-color: transparent;
+    margin: 10px;
+    height: fit-content;
+    width: fit-content;
+}
+
+.incoming-msg-box .profile-pic img {
+    max-width: 100%;
+    height: 26px;
+    width: 26px;
+    border-radius: 200px;
+}
+
+
+/*Outgoing message*/
+
+.outgoing-msg-box-holder {
+    text-align: -webkit-right;
+}
+
+.outgoing-msg-box {
+    width: auto;
+    margin: 20px 10px 20px 0px;
+    max-width: fit-content;
+}
+
+.outgoing-msg {
+    margin: 11px 0px;
+    width: max-content;
+    height: max-content;
+    min-width: 90px;
+    max-width: 500px;
+    word-wrap: break-word;
+    border-radius: 5px 20px 5px 20px;
+    padding: 5px 20px;
+    background-color: #8e90f8;
+    color: rgb(54, 54, 54);
+}
+
+.outgoing-msg-box .time {
+    color: rgb(65, 65, 65);
+    margin: 5px 0px 0px 0px;
+    max-width: fit-content;
+    font-size: 12px;
+}
+
+.outgoing-msg-box .profile-and-message {
+    display: flex;
+    align-items: center;
+}
+
+.outgoing-msg-box .profile-pic {
+    background-color: transparent;
+    margin: 10px;
+    height: fit-content;
+    width: fit-content;
+}
+
+.outgoing-msg-box .profile-pic img {
+    max-width: 100%;
+    height: 26px;
+    width: 26px;
+    border-radius: 200px;
+}
+
+.message-entry-area {
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+    background-color: #222222;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+}
+
+.message-entry-area .emojis,
+.message-entry-area .attachments {
+    margin: 0px 20px;
+}
+
+.message-entry-area .message-entry textarea {
+    width: 400px;
+    border: none;
+    border-radius: 20px;
+    height: 43px;
+    max-height: 200px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #68686842;
+    color: #cecdcd;
+    word-wrap: break-word;
+}
+
+.message-entry-area .message-entry textarea:focus {
+    outline: none;
+}
+
+
+/*Media queries*/
+
+@media screen and (max-width: 900px) {
+    * {
+        font-size: 20px;
+    }
+    .message-entry-area .message-entry textarea {
+        width: 300px;
+        font-size: 20px;
+    }
+    #icon {
+        max-width: 24px;
+        max-height: 24px;
+    }
+    .message-entry-area {
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+    }
+    .header * {
+        padding: 0px;
+        margin: 6px;
+    }
+    .header .contact-name {
+        margin: 0px 150px;
+    }
+    .send {
+        margin: 0px 0px 0px 50px;
+    }
+    .send button {
+        font-size: 30px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    * {
+        font-size: 20px;
+    }
+    .message-entry-area .message-entry textarea {
+        width: 270px;
+        font-size: 20px;
+    }
+    #icon {
+        max-width: 24px;
+        max-height: 24px;
+    }
+    .message-entry-area {
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+    }
+    .header * {
+        padding: 0px;
+        margin: 6px;
+    }
+    .header .contact-name {
+        margin: 0px 120px;
+    }
+    .send {
+        margin: 10px 0px 0px 30px;
+    }
+    .send button {
+        font-size: 30px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    * {
+        font-size: 20px;
+    }
+    .message-entry-area .message-entry textarea {
+        width: 250px;
+        font-size: 20px;
+    }
+    #icon {
+        max-width: 24px;
+        max-height: 24px;
+    }
+    .message-entry-area {
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+    }
+    .header * {
+        padding: 0px;
+        margin: 5px;
+    }
+    .header .contact-name {
+        margin: 0px 80px;
+    }
+    .send {
+        margin: 10px 0px 0px 20px;
+    }
+    .send button {
+        font-size: 20px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    * {
+        font-size: 20px;
+    }
+    .message-entry-area .message-entry textarea {
+        width: 200px;
+        font-size: 10px;
+    }
+    #icon {
+        max-width: 20px;
+        max-height: 20px;
+    }
+    .message-entry-area {
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        border-radius: 200px;
+    }
+    .header * {
+        padding: 0px;
+        margin: 1px;
+    }
+    .header .contact-name {
+        margin: 0px 60px;
+    }
+    .send {
+        margin: 10px 25px 0px 0px;
+        border-radius: 20px;
+        background-color: transparent;
+    }
+    .send button {
+        font-size: 15px;
+        background-image: -webkit-radial-gradient(#fa2d2d, #3131fc);
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    * {
+        font-size: 20px;
+    }
+    .message-entry-area .message-entry textarea {
+        width: 140px;
+        height: 20px;
+        font-size: 10px;
+    }
+    #icon {
+        max-width: 13px;
+        max-height: 13px;
+    }
+    .message-entry-area {
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        border-radius: 200px;
+    }
+    .header * {
+        padding: 0px;
+        margin: 1px;
+    }
+    .header .contact-name {
+        margin: 0px 60px;
+    }
+    .send {
+        margin: 10px 25px 0px 0px;
+        border-radius: 20px;
+        background-color: transparent;
+    }
+    .send button {
+        font-size: 12px;
+        border-radius: 10px;
+    }
+}
